@@ -4,8 +4,9 @@ SIJARLA (Sistem Informasi Jaga Rimba dan Lahan) adalah portal edukasi karhutla I
 
 ## Nama tim dan anggota
 
-- Nama tim: [Isi nama tim]
-- Anggota: [Isi nama anggota sesuai formulir lomba]
+- Nama tim: BLARATAN
+- Anggota: Fies Medhali Anugrahsyah, Risma Hidayati
+- 
 
 Ganti `namaTim` pada nama folder/repositori `webdesign_namaTim_technoversary_vol.II` sebelum pengumpulan.
 
