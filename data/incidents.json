@@ -1,0 +1,178 @@
+[
+  {
+    "id": "sumobito",
+    "place": "Sumobito dan Curahmalang",
+    "region": "Jombang, Jawa Timur",
+    "province": "Jawa Timur",
+    "date": "2026-11-12",
+    "area": 2,
+    "coordinates": [
+      -7.52,
+      112.34
+    ],
+    "source": "https://www.bnpb.go.id/berita/perkembangan-situasi-dan-penanganan-bencana-di-tanah-air-tanggal-14-november-2026",
+    "summary": "Api dari pembakaran sisa panen merambat ke lahan tebu di dua desa di Kecamatan Sumobito."
+  },
+  {
+    "id": "pagar",
+    "place": "Pagar",
+    "region": "Nunukan, Kalimantan Utara",
+    "province": "Kalimantan Utara",
+    "date": "2026-11-10",
+    "area": 4,
+    "coordinates": [
+      3.84,
+      116.93
+    ],
+    "source": "https://www.bnpb.go.id/index.php/berita/perkembangan-situasi-dan-penanganan-bencana-di-tanah-air-12-november-2026",
+    "summary": "Tim di Desa Pagar menghadapi medan yang jauh dari akses dan sumber air terbatas. Satu hektare kebun sawit produktif ikut terdampak."
+  },
+  {
+    "id": "buntu-kunyi",
+    "place": "Buntu Kunyi",
+    "region": "Luwu, Sulawesi Selatan",
+    "province": "Sulawesi Selatan",
+    "date": "2026-11-10",
+    "area": 3,
+    "coordinates": [
+      -3.44,
+      120.36
+    ],
+    "source": "https://www.bnpb.go.id/index.php/berita/perkembangan-situasi-dan-penanganan-bencana-di-tanah-air-12-november-2026",
+    "summary": "Api merambat cepat di lahan yang kering dan berangin. Pemadam dan warga melakukan pendinginan."
+  },
+  {
+    "id": "pattapang",
+    "place": "Pattapang",
+    "region": "Gowa, Sulawesi Selatan",
+    "province": "Sulawesi Selatan",
+    "date": "2026-11-08",
+    "area": 1,
+    "coordinates": [
+      -5.25,
+      119.9
+    ],
+    "source": "https://www.bnpb.go.id/index.php/berita/perkembangan-situasi-dan-penanganan-bencana-di-tanah-air-9-november-2026",
+    "summary": "BPBD dan tim gabungan memadamkan kebakaran di Tinggimoncong pada hari kejadian."
+  },
+  {
+    "id": "tanalanto",
+    "place": "Tanalanto",
+    "region": "Parigi Moutong, Sulawesi Tengah",
+    "province": "Sulawesi Tengah",
+    "date": "2026-11-05",
+    "area": 2,
+    "coordinates": [
+      -0.95,
+      120.29
+    ],
+    "source": "https://www.bnpb.go.id/index.php/berita/perkembangan-situasi-dan-penanganan-bencana-di-tanah-air-8-november-2026",
+    "summary": "Kebakaran di Pegunungan Tokasa bermula malam hari. Api dipadamkan selepas tengah malam."
+  },
+  {
+    "id": "baruga",
+    "place": "Baruga",
+    "region": "Kendari, Sulawesi Tenggara",
+    "province": "Sulawesi Tenggara",
+    "date": "2026-11-04",
+    "area": 4,
+    "coordinates": [
+      -4.06,
+      122.52
+    ],
+    "source": "https://www.bnpb.go.id/index.php/berita/perkembangan-situasi-dan-penanganan-bencana-di-tanah-air-8-november-2026",
+    "summary": "Pembakaran lahan di Kendari berdampak pada sekitar empat hektare. Tim memeriksa area untuk mengantisipasi api kembali menyala."
+  },
+  {
+    "id": "sinjai",
+    "place": "Kaloling Bulu",
+    "region": "Sinjai, Sulawesi Selatan",
+    "province": "Sulawesi Selatan",
+    "date": "2026-11-15",
+    "area": 2.5,
+    "coordinates": [
+      -5.13,
+      120.26
+    ],
+    "source": "https://www.bnpb.go.id/berita/perkembangan-situasi-dan-penanganan-bencana-di-tanah-air-tanggal-16-november-2026",
+    "summary": "Warga melihat asap dari lahan di Kecamatan Sinjai Timur, sekitar 200 meter dari permukiman. Pemeriksaan di lapangan menemukan sekitar 2,5 hektare lahan terbakar."
+  },
+  {
+    "id": "karangpakel",
+    "place": "Karangpakel",
+    "region": "Klaten, Jawa Tengah",
+    "province": "Jawa Tengah",
+    "date": "2026-11-15",
+    "area": 0.185,
+    "coordinates": [-7.73, 110.64],
+    "source": "https://www.bnpb.go.id/berita/perkembangan-situasi-dan-penanganan-bencana-di-tanah-air-tanggal-16-november-2026",
+    "summary": "Pembakaran sisa tanaman jagung di Kecamatan Trucuk merambat ke lahan sebelah. BNPB memperkirakan 1.850 meter persegi terbakar dan mencatat satu korban meninggal."
+  },
+  {
+    "id": "tanjong",
+    "place": "Tanjong",
+    "region": "Luwu, Sulawesi Selatan",
+    "province": "Sulawesi Selatan",
+    "date": "2026-11-13",
+    "area": 1,
+    "coordinates": [
+      -3.22,
+      120.33
+    ],
+    "source": "https://www.bnpb.go.id/berita/perkembangan-situasi-dan-penanganan-bencana-di-tanah-air-tanggal-14-november-2026",
+    "summary": "Kebakaran di Kecamatan Bua Ponrang merambat cepat dalam kondisi kering dan berangin. BNPB melaporkan api bermula dari pembakaran sampah."
+  },
+  {
+    "id": "tinompo",
+    "place": "Tinompo",
+    "region": "Morowali Utara, Sulawesi Tengah",
+    "province": "Sulawesi Tengah",
+    "date": "2026-11-12",
+    "area": 2,
+    "coordinates": [
+      -1.99,
+      121.33
+    ],
+    "source": "https://www.bnpb.go.id/berita/perkembangan-situasi-dan-penanganan-bencana-di-tanah-air-13-november-2026",
+    "summary": "Kebakaran lahan di Kecamatan Lembo berdampak pada sekitar dua hektare. Laporan BNPB mencatat kejadian pada siang hari."
+  },
+  {
+    "id": "tirowali",
+    "place": "Tirowali",
+    "region": "Luwu, Sulawesi Selatan",
+    "province": "Sulawesi Selatan",
+    "date": "2026-11-02",
+    "area": 5,
+    "coordinates": [
+      -3.3,
+      120.35
+    ],
+    "source": "https://www.bnpb.go.id/berita/perkembangan-situasi-dan-penanganan-bencana-di-tanah-air-4-november-2026",
+    "summary": "Api membakar lahan sagu di Kecamatan Ponrang. BPBD, petugas pemadam dan warga melakukan pemadaman dan pendinginan. BNPB melaporkan api telah padam pada 3 November."
+  },
+  {
+    "id": "karang-karangan",
+    "place": "Karang-karangan",
+    "region": "Luwu, Sulawesi Selatan",
+    "province": "Sulawesi Selatan",
+    "date": "2026-10-30",
+    "area": 4,
+    "coordinates": [
+      -3.06,
+      120.29
+    ],
+    "source": "https://www.bnpb.go.id//berita/perkembangan-situasi-dan-penanganan-bencana-di-tanah-air-1-november-2026",
+    "summary": "Lahan kosong di Kecamatan Bua terbakar saat tanah kering dan angin kencang. Tim pemadam bersama warga melakukan pemadaman dan pendinginan."
+  },
+  {
+    "id": "salati",
+    "place": "Salati",
+    "region": "Pulau Taliabu, Maluku Utara",
+    "province": "Maluku Utara",
+    "date": "2026-10-05",
+    "area": 347.06,
+    "coordinates": [-1.80, 124.38],
+    "source": "https://www.bnpb.go.id/berita/perkembangan-situasi-dan-penanganan-bencana-di-tanah-air-4-november-2026",
+    "summary": "Kebakaran bermula di Salati dan meluas ke 13 desa di tiga kecamatan. Perkiraan 347,06 hektare mencakup seluruh area terdampak."
+  }
+]

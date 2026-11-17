@@ -1,0 +1,64 @@
+[
+  {
+    "id": "asap-singapura-2026",
+    "region": "Singapura",
+    "date": "2026-09-15",
+    "title": "Asap Kalimantan dan Sumatra mencapai Singapura",
+    "summary": "Pada pertengahan September 2026, perubahan arah angin membawa asap ke Singapura. Data PM2.5 dan PSI menunjukkan bagaimana dampaknya terbaca di permukaan.",
+    "sections": {
+      "Jalur asap pada 14–15 September": "Pada 14 September 2026, Badan Lingkungan Nasional Singapura (NEA) melaporkan bahwa perubahan arah angin dari timur-tenggara membawa kepulan asap dari kebakaran di Kalimantan ke arah Singapura. Sebagian asap juga terlihat bergerak dari Sumatra bagian selatan. Pada 15 September, NEA melaporkan bahwa sebagian asap dari Kalimantan dan Sumatra memang terbawa sampai ke Singapura oleh angin dari timur-tenggara atau tenggara. Hujan semalam memperbaiki kondisi di sebagian kawasan, tetapi pengangkutan asap masih berlangsung.",
+      "Apa yang tercatat di udara Singapura": "Pada pukul 18.00 waktu Singapura, konsentrasi PM2.5 satu jam pada 14 September berada di kisaran 56–115 µg/m³, dengan PSI 24 jam sebesar 88–117. Pada jam yang sama keesokan harinya, PM2.5 satu jam berada di kisaran 43–74 µg/m³, sedangkan PSI 24 jam mencapai 92–131. Kedua rentang PSI berada pada kategori sedang hingga tidak sehat menurut NEA. Angka tersebut adalah rentang pengukuran di Singapura pada waktu pelaporan.",
+      "Mengapa kedua angka bisa bergerak berbeda": "PM2.5 satu jam merangkum kondisi terbaru untuk partikel berukuran halus. PSI 24 jam memakai jendela pengukuran yang lebih panjang, sehingga masih mencakup kondisi dari jam-jam sebelumnya. Karena periode ukur berbeda, penurunan PM2.5 satu jam dapat beriringan dengan PSI 24 jam yang lebih tinggi. Untuk menelusuri dampak lintas negara, pengamatan arah angin dan gerak kepulan asap perlu dibaca bersama pengukuran kualitas udara setempat."
+    },
+    "sources": [
+      {
+        "label": "NEA · Pembaruan 14 September 2026",
+        "url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-14-september-2026"
+      },
+      {
+        "label": "NEA · Pembaruan 15 September 2026",
+        "url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-15-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "asap-filipina-2026",
+    "region": "Filipina",
+    "date": "2026-09-02",
+    "title": "Jejak asap dari Kalimantan ke Filipina bagian barat",
+    "summary": "Citra NOAA-20 pada 2 September 2026 merekam kepulan asap bergerak dari Pulau Kalimantan ke bagian barat Filipina.",
+    "sections": {
+      "Apa yang terlihat pada 2 September": "Citra NOAA-20 yang dimuat dalam tinjauan September 2026 oleh ASEAN Specialised Meteorological Centre (ASMC) memperlihatkan kabut asap berkepadatan sedang hingga pekat di atas Pulau Kalimantan yang bergerak ke bagian barat Filipina. Dalam tinjauan bulanan yang sama, ASMC mencatat kepulan lintas batas berasal dari kelompok titik panas di sejumlah wilayah Kalimantan.",
+      "Mengapa arah angin perlu diperiksa": "Sepanjang September, kawasan ASEAN masih berada dalam periode monsun barat daya. ASMC mencatat bahwa angin lapisan bawah umumnya berasal dari tenggara di selatan khatulistiwa, sementara di utara khatulistiwa lebih banyak bertiup dari barat daya atau barat. Untuk menilai satu kejadian, pola angin bulanan tersebut memberi konteks. Citra tanggal 2 September memberi bukti yang lebih langsung tentang arah gerak kepulan pada hari itu.",
+      "Apa yang dapat disimpulkan untuk Filipina": "Tinjauan ASMC mendukung kesimpulan bahwa asap melintasi batas negara dan bergerak ke bagian barat Filipina. Untuk mengetahui konsentrasi partikel yang terhirup penduduk, dibutuhkan pengukuran kualitas udara di permukaan dengan lokasi dan waktu yang sesuai. Citra satelit menambah bukti tentang sebaran kepulan, sedangkan pengukuran di darat diperlukan untuk menilai dampak pada komunitas tertentu."
+    },
+    "sources": [
+      {
+        "label": "ASMC · Tinjauan September 2026, Gambar 7",
+        "url": "https://asmc.asean.org/review-of-regional-haze-situation-for-september-2026/"
+      }
+    ]
+  },
+  {
+    "id": "asap-malaysia-brunei-2026",
+    "region": "Malaysia dan Brunei",
+    "date": "2026-08-30",
+    "title": "Kabut asap lintas batas di Sarawak, Sabah, dan Brunei",
+    "summary": "Pada 30 Agustus 2026, citra Himawari-9 menunjukkan kabut asap lintas batas meliputi sebagian Kalimantan, Malaysia bagian timur, dan Brunei.",
+    "sections": {
+      "Perkembangan sebelum 30 Agustus": "Pada 26 Agustus 2026, ASEAN Specialised Meteorological Centre (ASMC) menaikkan status pemantauan untuk ASEAN selatan ke Level 3. Kondisi kering yang berkepanjangan menyertai memburuknya situasi asap. Pengamatan satelit menunjukkan kabut asap lintas batas bergerak ke utara dari kelompok titik panas di Kalimantan Barat. Peringatan itu memberi konteks atas peningkatan risiko di tingkat kawasan pada akhir Agustus.",
+      "Wilayah yang tercakup pada citra satelit": "Citra Himawari-9 pada 30 Agustus memperlihatkan sebaran asap berkepadatan sedang hingga pekat di Kalimantan Utara, Barat dan Tengah, Brunei, Sarawak bagian barat dan tengah, serta bagian selatan Sabah. Sarawak dan Sabah merupakan bagian Malaysia. Rangkaian wilayah tersebut memperlihatkan bagaimana kepulan dapat melintasi batas administrasi dalam satu pulau. Tinjauan bulanan juga mencatat kepulan dari titik panas di wilayah lain, sehingga sumber perlu ditelusuri untuk tiap episode.",
+      "Bagaimana membaca status peringatan": "Level 3 merupakan peringatan regional tentang memburuknya kondisi titik panas dan kabut asap. Untuk mengetahui mutu udara di kota tertentu, pembaca perlu merujuk pada hasil pemantauan setempat. Menggabungkan citra satelit, arah angin, dan pengukuran udara membantu negara-negara yang berbagi kawasan membandingkan waktu kemunculan asap dan memahami sejauh mana kepulan menyebar."
+    },
+    "sources": [
+      {
+        "label": "ASMC · Tinjauan Agustus 2026, Gambar 9",
+        "url": "https://asmc.asean.org/review-of-regional-haze-situation-for-august-2026/"
+      },
+      {
+        "label": "ASMC · Peringatan Level 3 pada 26 Agustus",
+        "url": "https://asmc.asean.org/alert20260826-activation-of-alert-level-3-for-the-southern-asean-region"
+      }
+    ]
+  }
+]
