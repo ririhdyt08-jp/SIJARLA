@@ -45,10 +45,10 @@
 
       <div class="story-chips mt-auto">
         <?php if (!empty($item['area'])): ?>
-          <span class="data-chip"><span aria-hidden="true">&#128205;</span> <?= e(luas($item['area'])) ?></span>
+          <span class="data-chip"><?= icon('area') ?> <?= e(luas($item['area'])) ?></span>
         <?php endif; ?>
         <?php if (!empty($item['coordinates'])): ?>
-          <span class="data-chip"><span aria-hidden="true">&#128204;</span> <?= e($item['coordinates'][0]) ?>, <?= e($item['coordinates'][1]) ?></span>
+          <span class="data-chip"><?= icon('pin') ?> <?= e($item['coordinates'][0]) ?>, <?= e($item['coordinates'][1]) ?></span>
         <?php endif; ?>
       </div>
 

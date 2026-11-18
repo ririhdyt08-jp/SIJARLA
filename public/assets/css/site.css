@@ -14,6 +14,13 @@ main { min-height: 68vh; }
 a { color: var(--rust); }
 a:hover { color: #ffc6aa; }
 a:focus-visible, button:focus-visible, select:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+.ui-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex: none;
+  vertical-align: -.125em;
+}
 h1, h2, h3, .brand { font-family: var(--display); font-weight: 800; }
 h1 { font-size: clamp(3.1rem, 8vw, 6.5rem); line-height: .94; }
 h2 { font-size: clamp(2.25rem, 5vw, 3.4rem); line-height: 1.02; }
@@ -218,6 +225,7 @@ p { line-height: 1.65; }
   border-radius: 2px;
   color: var(--ink);
 }
+.data-chip .ui-icon, .article-byline .ui-icon { color: var(--rust); }
 
 .regional-feature {
   flex-direction: row;
@@ -288,10 +296,20 @@ p { line-height: 1.65; }
   padding: 1.25rem;
   margin-bottom: 2rem;
 }
+.article-search { position: relative; }
+.article-search > .ui-icon {
+  position: absolute;
+  inset-inline-start: .9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+}
 .article-search-input {
   border: 1px solid var(--line);
   border-radius: 4px;
   padding: 0.65rem 1rem;
+  padding-inline-start: 2.4rem;
   font-size: 0.95rem;
   width: 100%;
   background: var(--paper);
@@ -333,6 +351,7 @@ p { line-height: 1.65; }
   border-color: var(--orange);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
 }
+.filter-btn .ui-icon { margin-inline-end: .15em; }
 .filter-count {
   font-size: 0.88rem;
   color: var(--muted);
@@ -700,8 +719,9 @@ p { line-height: 1.65; }
   gap: 1rem;
 }
 .emergency-icon {
-  font-size: 2.5rem;
-  line-height: 1;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.55rem;
 }
 .emergency-title {
   display: block;
@@ -738,9 +758,20 @@ p { line-height: 1.65; }
 .kontak-card-team {
   border-top-color: var(--rust);
 }
+.emergency-icon, .kontak-card-icon, .kontak-nav-icon {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  color: var(--orange);
+  background: #ff743614;
+  border: 1px solid #ff74363d;
+  border-radius: .65rem;
+}
 .kontak-card-icon {
-  font-size: 2rem;
-  padding: 1.25rem 1.5rem 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: 1.25rem 1.5rem 0;
+  font-size: 1.4rem;
 }
 .kontak-card-body {
   padding: 1rem 1.5rem 1.5rem;
@@ -837,7 +868,9 @@ p { line-height: 1.65; }
   color: var(--orange);
 }
 .kontak-nav-icon {
-  font-size: 1.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 1.125rem;
   margin-bottom: 0.25rem;
 }
 .kontak-nav-card strong {

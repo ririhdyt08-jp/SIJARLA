@@ -63,11 +63,11 @@ require __DIR__ . '/../app/header.php';
       <h1><?= e($itemTitle) ?></h1>
       
       <div class="article-byline">
-        <span><span aria-hidden="true">&#128197;</span> <time datetime="<?= e($selected['date']) ?>"><?= e(tanggal($selected['date'])) ?></time></span>
+        <span><?= icon('calendar') ?> <time datetime="<?= e($selected['date']) ?>"><?= e(tanggal($selected['date'])) ?></time></span>
         <span>&middot;</span>
-        <span><span aria-hidden="true">&#128205;</span> <?= e($itemRegion) ?></span>
+        <span><?= icon('pin') ?> <?= e($itemRegion) ?></span>
         <span>&middot;</span>
-        <span><span aria-hidden="true">&#9201;</span> &plusmn; 2 Menit Baca</span>
+        <span><?= icon('clock') ?> &plusmn; 2 Menit Baca</span>
       </div>
     </div>
   </section>
@@ -154,7 +154,7 @@ require __DIR__ . '/../app/header.php';
               Lihat Titik Panas di Peta <span class="arrow-icon" aria-hidden="true">&#8599;</span>
             </a>
             <button class="action light-outline" type="button" id="copy-link-btn" onclick="copyCurrentUrl()">
-              Salin Tautan <span id="copy-icon" aria-hidden="true">&#128203;</span>
+              Salin Tautan <?= icon('copy') ?>
             </button>
           </div>
           <div id="copy-toast" class="copy-feedback-toast" role="status" aria-live="polite"></div>
@@ -279,9 +279,7 @@ require __DIR__ . '/../app/header.php';
     function copyCurrentUrl() {
       navigator.clipboard.writeText(window.location.href).then(() => {
         const toast = document.getElementById('copy-toast');
-        const icon = document.getElementById('copy-icon');
-        if (toast) { toast.textContent = '\u2714 Tautan berhasil disalin!'; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 3500); }
-        if (icon) { icon.textContent = '\u2714'; setTimeout(() => icon.textContent = '\uD83D\uDCCB', 3500); }
+        if (toast) { toast.textContent = 'Tautan berhasil disalin!'; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 3500); }
       }).catch(() => { alert('Tautan: ' + window.location.href); });
     }
   </script>
@@ -339,7 +337,10 @@ require __DIR__ . '/../app/header.php';
     <div class="article-toolbar" role="search" aria-label="Pencarian dan Filter Artikel">
       <div class="row g-3 align-items-center mb-3">
         <div class="col-lg-7">
-          <input type="search" id="article-search" class="article-search-input" placeholder="&#128269; Cari nama desa, kabupaten, provinsi, atau kata kunci..." aria-label="Cari artikel">
+          <div class="article-search">
+            <?= icon('search') ?>
+            <input type="search" id="article-search" class="article-search-input" placeholder="Cari nama desa, kabupaten, provinsi, atau kata kunci..." aria-label="Cari artikel">
+          </div>
         </div>
         <div class="col-lg-5 text-lg-end">
           <div class="filter-count" id="filter-count-display">
@@ -351,8 +352,8 @@ require __DIR__ . '/../app/header.php';
       <div class="filter-pill-group mb-2" role="group" aria-label="Filter kategori artikel">
         <span class="text-muted small fw-bold text-uppercase me-1" style="font-size:0.75rem;letter-spacing:0.05em">Kategori:</span>
         <button type="button" class="filter-btn active" data-filter="all">Semua (<?= $totalReports ?>)</button>
-        <button type="button" class="filter-btn" data-filter="category:field">&#128293; Lapangan (<?= $totalField ?>)</button>
-        <button type="button" class="filter-btn" data-filter="category:regional">&#127758; Lintas Batas (<?= $totalRegional ?>)</button>
+        <button type="button" class="filter-btn" data-filter="category:field"><?= icon('flame') ?> Lapangan (<?= $totalField ?>)</button>
+        <button type="button" class="filter-btn" data-filter="category:regional"><?= icon('globe') ?> Lintas Batas (<?= $totalRegional ?>)</button>
         <span class="text-muted small fw-bold text-uppercase ms-lg-2 me-1" style="font-size:0.75rem;letter-spacing:0.05em">Pulau:</span>
         <button type="button" class="filter-btn" data-filter="island:jawa">Jawa</button>
         <button type="button" class="filter-btn" data-filter="island:kalimantan">Kalimantan</button>
