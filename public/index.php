@@ -8,7 +8,6 @@ require __DIR__ . '/../app/header.php';
   <video id="hero-video" class="hero-video" muted loop playsinline preload="none"
     data-src="assets/video/hero-karhutla.mp4" aria-hidden="true"></video>
   <div class="container hero-content">
-    <p class="eyebrow"><span class="signal"></span> KARHUTLA INDONESIA / 2026</p>
     <h1>SAAT HUTAN<br>MENJADI <em>BARA.</em></h1>
     <p class="hero-copy">Asap karhutla Indonesia bisa terbawa angin hingga ke negara tetangga. Telusuri titik panasnya dan baca dampaknya bagi kualitas udara di Asia Tenggara.</p>
     <div class="actions"><a class="action primary" href="peta.php">Jelajahi peta <span aria-hidden="true">↗</span></a><a class="action outline" href="artikel.php">Baca laporan <span aria-hidden="true">→</span></a></div>
