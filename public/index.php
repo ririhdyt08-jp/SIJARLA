@@ -20,8 +20,18 @@ require __DIR__ . '/../app/header.php';
     <li>Laporkan asap atau titik api melalui kanal resmi di halaman Kontak</li>
   </ul>
 </aside>
-<section class="container section">
-  <div class="section-head"><div><p class="eyebrow">DARI LAPANGAN</p><h2>Laporan karhutla</h2></div><a class="text-link" href="artikel.php">Semua laporan ↗</a></div>
-  <?php $stories = array_slice($incidents, 0, 3); require __DIR__ . '/../app/cards.php'; ?>
+<section class="container section report-carousel" aria-labelledby="report-heading">
+  <div class="section-head">
+    <div><p class="eyebrow">DARI LAPANGAN</p><h2 id="report-heading">Laporan karhutla</h2></div>
+    <div class="report-carousel-actions">
+      <a class="text-link" href="artikel.php">Semua laporan ↗</a>
+      <div class="report-carousel-controls" hidden>
+        <button class="action outline" type="button" data-slide="-1" aria-label="Laporan sebelumnya" aria-controls="article-grid">&#8592;</button>
+        <button class="action outline" type="button" data-rotate aria-controls="article-grid">Jeda</button>
+        <button class="action outline" type="button" data-slide="1" aria-label="Laporan berikutnya" aria-controls="article-grid">&#8594;</button>
+      </div>
+    </div>
+  </div>
+  <?php $stories = array_slice($incidents, 0, 9); require __DIR__ . '/../app/cards.php'; ?>
 </section>
 <?php require __DIR__ . '/../app/footer.php'; ?>
