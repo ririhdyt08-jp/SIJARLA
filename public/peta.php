@@ -20,15 +20,16 @@ require __DIR__ . '/../app/header.php';
         data-lng="<?= e((string) $mapIncident['coordinates'][1]) ?>"
         data-place="<?= e($mapIncident['place']) ?>"
       <?php endif; ?>></div>
-    <aside class="map-legend" aria-label="Legenda warna titik panas">
-      <strong>Legenda warna</strong>
-      <small>Keyakinan deteksi VIIRS NOAA-20</small>
-      <span><i class="hotspot-key high" aria-hidden="true"></i> Merah · Tinggi</span>
-      <span><i class="hotspot-key nominal" aria-hidden="true"></i> Oranye · Nominal</span>
-      <span><i class="hotspot-key low" aria-hidden="true"></i> Biru · Rendah</span>
-      <span><i class="hotspot-key unknown" aria-hidden="true"></i> Abu-abu · Tanpa kategori</span>
-      <span><i class="hotspot-key grouped" aria-hidden="true"></i> Lingkaran angka · Grup deteksi</span>
-      <span><i class="hotspot-key high" aria-hidden="true"></i> Cincin merah · Grup memuat deteksi tinggi</span>
+    <aside class="map-legend" aria-label="Legenda deteksi satelit">
+      <strong>Grup deteksi</strong>
+      <span><span class="hotspot-cluster" aria-hidden="true">12</span> Tanpa deteksi keyakinan tinggi</span>
+      <span><span class="hotspot-cluster has-high-confidence" aria-hidden="true">12</span> Ada deteksi keyakinan tinggi</span>
+      <small>Angka = jumlah deteksi dalam grup. Klik untuk zoom.</small>
+      <strong>Titik tunggal</strong>
+      <span><i class="hotspot-key high" aria-hidden="true"></i> Merah · keyakinan tinggi</span>
+      <span><i class="hotspot-key nominal" aria-hidden="true"></i> Oranye · keyakinan nominal</span>
+      <span><i class="hotspot-key low" aria-hidden="true"></i> Biru · keyakinan rendah</span>
+      <span><i class="hotspot-key unknown" aria-hidden="true"></i> Abu-abu · tanpa kategori</span>
     </aside>
   </div>
   <div class="map-tools map-dashboard">

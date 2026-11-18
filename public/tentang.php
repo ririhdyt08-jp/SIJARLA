@@ -7,6 +7,10 @@ require __DIR__ . '/../app/header.php';
 <section class="page-intro intro-about"><div class="container"><p class="eyebrow">TENTANG <?= SITE ?></p><h1>MENGENAL KEBAKARAN HUTAN DAN LAHAN (KARHUTLA).</h1><p>Portal edukasi independen yang mengangkat karhutla Indonesia sebagai isu lingkungan global.</p></div></section>
 <section class="container section reading">
   <section class="mt-0">
+    <h2>Apa itu SIJARLA?</h2>
+    <p>SIJARLA adalah singkatan dari <strong><?= e(SITE_FULL) ?></strong>. Portal edukasi independen ini membantu masyarakat memahami kebakaran hutan dan lahan di Indonesia. Di sini, pengunjung bisa membaca laporan kejadian dan dampak asap lintas batas, melihat sebaran titik panas satelit di Peta GIS, dan menemukan kanal resmi untuk melaporkan asap atau titik api.</p>
+  </section>
+  <section>
     <h2>Apa Itu Karhutla?</h2>
     <p>Kebakaran Hutan dan Lahan (Karhutla) merupakan peristiwa terbakarnya kawasan hutan, lahan perkebunan, semak belukar, maupun area gambut, baik yang terjadi secara alami maupun akibat aktivitas manusia. Di Indonesia, karhutla menjadi salah satu permasalahan lingkungan yang terus mendapat perhatian karena dampaknya tidak hanya merusak ekosistem, tetapi juga mengancam kesehatan masyarakat, mengganggu aktivitas ekonomi, serta memengaruhi kondisi lingkungan dalam skala regional hingga global.</p>
     <p>Indonesia memiliki kawasan hutan tropis dan lahan gambut yang luas. Sebagian wilayah tersebut memiliki tingkat kerawanan kebakaran yang meningkat ketika memasuki musim kemarau. Kondisi cuaca yang panas, curah hujan rendah, serta vegetasi yang mengering dapat membuat api lebih mudah muncul dan menyebar. Ketika kebakaran terjadi di lahan gambut, penanganannya menjadi lebih sulit karena api dapat menjalar hingga ke lapisan bawah tanah dan bertahan dalam waktu lama meskipun api di permukaan telah berhasil dipadamkan.</p>

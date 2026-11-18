@@ -14,19 +14,11 @@ require __DIR__ . '/../app/header.php';
   </div>
 </section>
 <aside class="info-ticker" aria-label="Informasi SIJARLA">
-  <input type="checkbox" class="btn-check" id="pause-ticker" autocomplete="off">
-  <div class="ticker-window">
-    <div class="ticker-track">
-      <?php for ($copy = 0; $copy < 2; $copy++): ?>
-      <ul class="ticker-items list-unstyled mb-0"<?= $copy ? ' aria-hidden="true"' : '' ?>>
-        <li>Data titik panas VIIRS NOAA-20 tersedia hingga <?= SNAPSHOT ?></li>
-        <li>Pilih bulan di Peta GIS untuk melihat sebaran titik panas</li>
-        <li>Laporkan asap atau titik api melalui kanal resmi di halaman Kontak</li>
-      </ul>
-      <?php endfor; ?>
-    </div>
-  </div>
-  <label class="ticker-pause" for="pause-ticker">Jeda teks</label>
+  <ul class="container ticker-items list-unstyled mb-0" role="list">
+    <li>Data titik panas VIIRS NOAA-20 tersedia hingga <?= SNAPSHOT ?></li>
+    <li>Pilih bulan di Peta GIS untuk melihat sebaran titik panas</li>
+    <li>Laporkan asap atau titik api melalui kanal resmi di halaman Kontak</li>
+  </ul>
 </aside>
 <section class="container section">
   <div class="section-head"><div><p class="eyebrow">DARI LAPANGAN</p><h2>Laporan karhutla</h2></div><a class="text-link" href="artikel.php">Semua laporan ↗</a></div>
