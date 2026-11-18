@@ -16,7 +16,7 @@
 <?php endif; ?>
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body>
+<body<?= $active === 'index' ? ' class="home-page"' : '' ?>>
 <a class="skip-link" href="#konten">Lewati ke konten</a>
 <header class="site-header">
   <nav class="container navbar navbar-expand-lg navbar-dark" aria-label="Navigasi utama">

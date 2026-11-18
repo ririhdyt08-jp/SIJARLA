@@ -219,6 +219,22 @@ p { line-height: 1.65; }
 }
 .regional-feature > div { flex: 1 1 27rem; }
 
+.home-page {
+  --ink: #f5f3f0;
+  --paper: #151515;
+  --line: #42403e;
+  --rust: #ff9e75;
+  --muted: #cbc5bf;
+}
+.home-page .story { background: #202020; }
+.home-page .story:hover { border-color: #68625d; }
+.home-page .story:hover:is(.is-field, .regional-feature) { border-left-color: var(--orange); }
+.home-page .story:hover.is-regional { border-left-color: var(--rust); }
+.home-page .badge-tag.field { background: #3c241b; border-color: #764630; }
+.home-page .badge-tag.region { background: #343230; }
+.home-page .text-link:hover { color: #ffc6aa; }
+.home-page a:focus-visible { outline-color: var(--orange); }
+
 .page-intro {
   padding-block: clamp(3rem, 7vw, 5.5rem);
   background: radial-gradient(ellipse at top right, #583321, #232121 60%, #181818);
