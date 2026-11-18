@@ -29,16 +29,6 @@ require __DIR__ . '/../app/header.php';
   <label class="ticker-pause" for="pause-ticker">Jeda teks</label>
 </aside>
 <section class="container section">
-  <article class="story regional-feature">
-    <div>
-      <p class="eyebrow">SINGAPURA · 15 SEPTEMBER 2026</p>
-      <h2>Asap Kalimantan dan Sumatra mencapai Singapura.</h2>
-      <p class="mb-0">Badan Lingkungan Nasional Singapura mencatat asap terbawa angin dari timur-tenggara dan tenggara. Laporan hari itu mencatat PSI 24 jam di kisaran 92–131, dari kategori sedang hingga tidak sehat.</p>
-    </div>
-    <a class="action primary" href="artikel.php?id=asap-singapura-2026">Baca kasus Singapura ↗</a>
-  </article>
-</section>
-<section class="container section pt-0">
   <div class="section-head"><div><p class="eyebrow">DARI LAPANGAN</p><h2>Laporan karhutla</h2></div><a class="text-link" href="artikel.php">Semua laporan ↗</a></div>
   <?php $stories = array_slice($incidents, 0, 3); require __DIR__ . '/../app/cards.php'; ?>
 </section>

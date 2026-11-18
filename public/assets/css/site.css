@@ -227,22 +227,23 @@ p { line-height: 1.65; }
 }
 .data-chip .ui-icon, .article-byline .ui-icon { color: var(--rust); }
 
-.regional-feature {
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: end;
-  justify-content: space-between;
-  gap: 1.25rem 2rem;
-  border-left: 4px solid var(--orange);
-}
-.regional-feature > div { flex: 1 1 27rem; }
-
 .page-intro {
   padding-block: clamp(3rem, 7vw, 5.5rem);
   background: radial-gradient(ellipse at top right, #583321, #232121 60%, #181818);
   color: white;
 }
 .page-intro p:last-child { margin: 1.2rem 0 0; color: #e6ded8; max-width: 48rem; }
+.page-intro:is(.intro-about, .intro-articles, .intro-contact) {
+  background:
+    linear-gradient(90deg, #131313ed, #131313ba 58%, #13131375),
+    var(--intro-image) center var(--intro-position, center) / cover no-repeat #181818;
+}
+.intro-about {
+  --intro-image: url("../img/tentang-karhutla.webp");
+  --intro-position: 58%;
+}
+.intro-articles { --intro-image: url("../img/artikel-karhutla.jpg"); }
+.intro-contact { --intro-image: url("../img/kontak-karhutla.jpg"); }
 .reading { max-width: 780px; }
 .reading h2:not(:first-child) { margin-top: 2rem; }
 .reading article, .reading section { margin-block: 2rem; }
@@ -636,7 +637,8 @@ p { line-height: 1.65; }
 /* Map Dashboard & GIS Styles */
 .map-tools { display: flex; flex-wrap: wrap; align-items: end; gap: .8rem 1rem; margin-bottom: 1rem; }
 .map-tools select { min-height: 46px; min-width: 13rem; }
-.map-note { font-size: .9rem; color: var(--muted); }
+.map-page { padding-block: clamp(.6rem, 2vw, 1.25rem); }
+.map-page .map-frame { margin-bottom: 1rem; }
 #map { height: clamp(350px, 68vh, 700px); border: 1px solid #394b54; border-radius: 4px; background: #121f2b; }
 #map :is(.leaflet-bar a, .leaflet-control-layers, .leaflet-control-attribution,
     .leaflet-popup-content-wrapper, .leaflet-popup-tip) {
@@ -681,13 +683,6 @@ p { line-height: 1.65; }
 .hotspot-cluster:focus-visible { outline: 2px solid white; outline-offset: 2px; }
 .hotspot-cluster.has-high-confidence { border-color: #ff675d; background: #5c2829f2; }
 .hotspot-popup p { margin: .25rem 0; }
-.recap-metric { border-top: 3px solid var(--orange); padding: 1rem; }
-.recap-metric dt { color: var(--muted); font-size: .875rem; }
-.recap-metric dd { margin: auto 0 0; padding-top: .35rem; font-family: var(--display); font-size: 2rem; font-weight: 800; line-height: 1; }
-.recap-chart-title { margin-bottom: .7rem; font-family: var(--display); font-size: 2.1rem; font-weight: 800; line-height: 1; }
-.recap-bar-row { padding-block: .32rem; font-size: .88rem; }
-.recap-bar { overflow: hidden; height: .43rem; margin-top: .22rem; background: #343230; border-radius: 1rem; }
-.recap-bar span { display: block; height: 100%; background: var(--orange); border-radius: inherit; }
 .table { --bs-table-bg: transparent; }
 
 @media (max-width: 575px) {

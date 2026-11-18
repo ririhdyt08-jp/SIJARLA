@@ -5,7 +5,7 @@ $active = 'kontak';
 require __DIR__ . '/../app/header.php';
 ?>
 
-<section class="page-intro">
+<section class="page-intro intro-contact">
   <div class="container">
     <p class="eyebrow"><span class="signal"></span> KANAL PELAPORAN &amp; KOMUNIKASI</p>
     <h1>HUBUNGI KAMI.</h1>

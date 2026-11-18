@@ -300,7 +300,7 @@ require __DIR__ . '/../app/header.php';
 
 <?php else: ?>
   <!-- List View -->
-  <section class="page-intro">
+  <section class="page-intro intro-articles">
     <div class="container">
       <p class="eyebrow"><span class="signal"></span> ARSIP INVESTIGASI &amp; JURNAL LINGKUNGAN / 2026</p>
       <h1>ARSIP LAPORAN KARHUTLA.</h1>

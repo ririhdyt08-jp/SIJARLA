@@ -4,7 +4,7 @@ $title = 'Tentang';
 $active = 'tentang';
 require __DIR__ . '/../app/header.php';
 ?>
-<section class="page-intro"><div class="container"><p class="eyebrow">TENTANG <?= SITE ?></p><h1>MENGENAL KEBAKARAN HUTAN DAN LAHAN (KARHUTLA).</h1><p>Portal edukasi independen yang mengangkat karhutla Indonesia sebagai isu lingkungan global.</p></div></section>
+<section class="page-intro intro-about"><div class="container"><p class="eyebrow">TENTANG <?= SITE ?></p><h1>MENGENAL KEBAKARAN HUTAN DAN LAHAN (KARHUTLA).</h1><p>Portal edukasi independen yang mengangkat karhutla Indonesia sebagai isu lingkungan global.</p></div></section>
 <section class="container section reading">
   <section class="mt-0">
     <h2>Apa Itu Karhutla?</h2>
