@@ -644,23 +644,6 @@ p { line-height: 1.65; }
   color: #c7c2bc;
 }
 
-/* Action Toolbar & Copy Toast */
-.article-action-toolbar {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 4px;
-}
-.copy-feedback-toast {
-  display: none;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #80dc98;
-  margin-top: 0.75rem;
-}
-.copy-feedback-toast.show {
-  display: block;
-}
-
 /* Related Articles Section */
 .related-articles-section {
   margin-top: 4rem;

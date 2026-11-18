@@ -23,7 +23,6 @@ function icon(string $name): string {
         'book' => '<path d="M12 6c-2-2-6-3-10-2v14c4-1 8 0 10 2 2-2 6-3 10-2V4c-4-1-8 0-10 2Zm0 0v14"/>',
         'calendar' => '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/>',
         'clock' => '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
-        'copy' => '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 4H6a2 2 0 0 0-2 2v10"/>',
         'search' => '<circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/>',
         'globe' => '<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/>',
     };

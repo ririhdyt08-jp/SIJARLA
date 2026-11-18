@@ -146,19 +146,6 @@ require __DIR__ . '/../app/header.php';
           </div>
         <?php endif; ?>
 
-        <!-- Action Toolbar -->
-        <div class="article-action-toolbar mt-5 p-4">
-          <h3 class="h4 mb-3">Tindakan Lanjutan</h3>
-          <div class="actions">
-            <a class="action primary" href="<?= e($mapUrl) ?>">
-              Lihat Titik Panas di Peta <span class="arrow-icon" aria-hidden="true">&#8599;</span>
-            </a>
-            <button class="action light-outline" type="button" id="copy-link-btn" onclick="copyCurrentUrl()">
-              Salin Tautan <?= icon('copy') ?>
-            </button>
-          </div>
-          <div id="copy-toast" class="copy-feedback-toast" role="status" aria-live="polite"></div>
-        </div>
       </div>
 
       <!-- Sidebar Column -->
@@ -276,12 +263,6 @@ require __DIR__ . '/../app/header.php';
       bar.style.width = (height > 0 ? (winScroll / height) * 100 : 0) + '%';
     });
 
-    function copyCurrentUrl() {
-      navigator.clipboard.writeText(window.location.href).then(() => {
-        const toast = document.getElementById('copy-toast');
-        if (toast) { toast.textContent = 'Tautan berhasil disalin!'; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 3500); }
-      }).catch(() => { alert('Tautan: ' + window.location.href); });
-    }
   </script>
 
 <?php elseif ($id !== null): ?>
