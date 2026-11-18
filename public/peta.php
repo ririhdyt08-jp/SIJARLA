@@ -26,11 +26,11 @@ require __DIR__ . '/../app/header.php';
         data-place="<?= e($mapIncident['place']) ?>"
       <?php endif; ?>></div>
     <aside class="map-legend" aria-label="Legenda deteksi satelit">
-      <strong>Grup deteksi</strong>
-      <span><span class="hotspot-cluster" aria-hidden="true">12</span> Tanpa deteksi keyakinan tinggi</span>
-      <span><span class="hotspot-cluster has-high-confidence" aria-hidden="true">12</span> Ada deteksi keyakinan tinggi</span>
-      <small>Angka = jumlah deteksi dalam grup. Klik untuk zoom.</small>
-      <strong>Titik tunggal</strong>
+      <strong>Lingkaran bernomor</strong>
+      <span><span class="hotspot-cluster" aria-hidden="true">12</span> Oranye · tanpa deteksi berkeyakinan tinggi</span>
+      <span><span class="hotspot-cluster has-high-confidence" aria-hidden="true">12</span> Merah · minimal satu deteksi berkeyakinan tinggi</span>
+      <small>Angka menunjukkan jumlah deteksi dalam grup.</small>
+      <strong>Titik deteksi satuan</strong>
       <span><i class="hotspot-key high" aria-hidden="true"></i> Merah · keyakinan tinggi</span>
       <span><i class="hotspot-key nominal" aria-hidden="true"></i> Oranye · keyakinan nominal</span>
       <span><i class="hotspot-key low" aria-hidden="true"></i> Biru · keyakinan rendah</span>

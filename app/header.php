@@ -19,7 +19,7 @@
 <body>
 <a class="skip-link" href="#konten">Lewati ke konten</a>
 <header class="site-header">
-  <nav class="container navbar navbar-expand-lg navbar-dark" aria-label="Navigasi utama">
+  <nav class="container navbar navbar-expand-lg navbar-dark px-3 px-lg-0" aria-label="Navigasi utama">
     <a class="navbar-brand brand" href="index.php"><span><?= SITE ?></span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Buka menu"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
