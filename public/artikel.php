@@ -37,6 +37,13 @@ require __DIR__ . '/../app/header.php';
     $itemRegion = $selected['province'] ?? $selected['region'];
     $categoryTag = $isRegional ? 'ASAP LINTAS BATAS &middot; REGIONAL ASEAN' : 'KARHUTLA LAPANGAN &middot; TERVERIFIKASI';
     $monthParam = substr($selected['date'], 0, 7);
+    $mapQuery = ['bulan' => $monthParam];
+    $mapAnchor = '#peta-bulanan';
+    if (!empty($selected['coordinates'])) {
+        $mapQuery['kejadian'] = $selected['id'];
+        $mapAnchor = '#map';
+    }
+    $mapUrl = 'peta.php?' . http_build_query($mapQuery) . $mapAnchor;
   ?>
   <div class="reading-progress-track" aria-hidden="true">
     <div class="reading-progress-bar" id="reading-bar"></div>
@@ -143,7 +150,7 @@ require __DIR__ . '/../app/header.php';
         <div class="article-action-toolbar mt-5 p-4">
           <h3 class="h4 mb-3">Tindakan Lanjutan</h3>
           <div class="actions">
-            <a class="action primary" href="peta.php?bulan=<?= e($monthParam) ?>#peta-bulanan">
+            <a class="action primary" href="<?= e($mapUrl) ?>">
               Lihat Titik Panas di Peta <span class="arrow-icon" aria-hidden="true">&#8599;</span>
             </a>
             <button class="action light-outline" type="button" id="copy-link-btn" onclick="copyCurrentUrl()">
@@ -201,7 +208,7 @@ require __DIR__ . '/../app/header.php';
 
           <?php if (!empty($selected['coordinates'])): ?>
             <div class="factsheet-cta mt-3">
-              <a class="action outline w-100" href="peta.php?bulan=<?= e($monthParam) ?>#peta-bulanan">
+              <a class="action outline w-100" href="<?= e($mapUrl) ?>">
                 Buka di Peta Satelit <span class="arrow-icon" aria-hidden="true">&#8594;</span>
               </a>
             </div>

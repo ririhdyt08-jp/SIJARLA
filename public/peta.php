@@ -3,9 +3,14 @@ require __DIR__ . '/../app/bootstrap.php';
 $title = 'Peta GIS';
 $active = 'peta';
 $recap = [];
+$mapIncident = null;
+$incidentId = $_GET['kejadian'] ?? null;
 foreach ($incidents as $incident) {
     $province = $incident['province'];
     $recap[$province] = ($recap[$province] ?? 0) + 1;
+    if ($incident['id'] === $incidentId && !empty($incident['coordinates'])) {
+        $mapIncident = $incident;
+    }
 }
 arsort($recap);
 $maxCount = max($recap ?: [1]);
@@ -33,7 +38,12 @@ require __DIR__ . '/../app/header.php';
     <label><input id="hotspot-high-only" class="form-check-input me-1" type="checkbox" disabled> Tampilkan hanya deteksi berkeyakinan tinggi</label>
   </aside>
   <div class="map-frame">
-    <div id="map" aria-label="Peta interaktif kejadian karhutla"></div>
+    <div id="map" aria-label="Peta interaktif kejadian karhutla"
+      <?php if ($mapIncident): ?>
+        data-lat="<?= e((string) $mapIncident['coordinates'][0]) ?>"
+        data-lng="<?= e((string) $mapIncident['coordinates'][1]) ?>"
+        data-place="<?= e($mapIncident['place']) ?>"
+      <?php endif; ?>></div>
     <aside class="map-legend" aria-label="Legenda warna titik panas">
       <strong>Legenda warna</strong>
       <small>Keyakinan deteksi VIIRS NOAA-20</small>
