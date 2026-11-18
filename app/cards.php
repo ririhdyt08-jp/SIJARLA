@@ -26,6 +26,7 @@
   <div class="col-md-6 col-lg-4 article-card-col" 
        data-category="<?= $isRegional ? 'regional' : 'field' ?>" 
        data-island="<?= $island ?>"
+       data-month="<?= substr($item['date'], 0, 7) ?>"
        data-search="<?= strtolower(e($itemTitle . ' ' . $itemRegion . ' ' . ($item['place'] ?? '') . ' ' . $item['summary'])) ?>">
     <article class="story <?= $isRegional ? 'is-regional' : 'is-field' ?> h-100">
       <div class="story-badges mb-2">
@@ -51,7 +52,9 @@
           <span class="data-chip"><span aria-hidden="true">📍</span> <?= e($item['coordinates'][0]) ?>, <?= e($item['coordinates'][1]) ?></span>
         <?php endif; ?>
         <?php if ($isRegional): ?>
-          <span class="data-chip"><span aria-hidden="true">🛰️</span> Satelit ASMC</span>
+          <span class="data-chip"><span aria-hidden="true">🛰️</span> Ref: ASMC & NEA</span>
+        <?php else: ?>
+          <span class="data-chip"><span aria-hidden="true">🏢</span> Ref: Sipongi & BNPB</span>
         <?php endif; ?>
       </div>
 

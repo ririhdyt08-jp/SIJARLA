@@ -363,9 +363,9 @@ require __DIR__ . '/../app/header.php';
         <p class="intel-stat-desc">Taksiran luasan insiden lapangan terdata</p>
       </div>
       <div class="intel-stat-card">
-        <span class="intel-stat-label">Verifikasi Satelit</span>
-        <div class="intel-stat-value">VIIRS NOAA-20</div>
-        <p class="intel-stat-desc">Terintegrasi dengan BNPB, ASMC & NEA</p>
+        <span class="intel-stat-label">Rujukan Data Resmi</span>
+        <div class="intel-stat-value">6 Sumber Data</div>
+        <p class="intel-stat-desc">Sipongi KLHK, BMKG Cuaca, Pantau Gambut & NOAA-20</p>
       </div>
     </div>
 
@@ -388,7 +388,7 @@ require __DIR__ . '/../app/header.php';
         </div>
       </div>
 
-      <div class="filter-pill-group" role="group" aria-label="Filter kategori artikel">
+      <div class="filter-pill-group mb-2" role="group" aria-label="Filter kategori artikel">
         <span class="text-muted small fw-bold text-uppercase me-1" style="font-size: 0.75rem; letter-spacing: 0.05em;">Kategori:</span>
         <button type="button" class="filter-btn active" data-filter="all">Semua (<?= $totalReports ?>)</button>
         <button type="button" class="filter-btn" data-filter="category:field">🔥 Lapangan (<?= $totalField ?>)</button>
@@ -398,6 +398,14 @@ require __DIR__ . '/../app/header.php';
         <button type="button" class="filter-btn" data-filter="island:kalimantan">Kalimantan</button>
         <button type="button" class="filter-btn" data-filter="island:sulawesi">Sulawesi</button>
         <button type="button" class="filter-btn" data-filter="island:maluku">Maluku</button>
+      </div>
+
+      <div class="filter-pill-group pt-2 border-top" role="group" aria-label="Filter periode bulan kejadian">
+        <span class="text-muted small fw-bold text-uppercase me-1" style="font-size: 0.75rem; letter-spacing: 0.05em;">📅 Periode Bulan:</span>
+        <button type="button" class="filter-btn" data-filter="month:2026-11">November 2026 (13)</button>
+        <button type="button" class="filter-btn" data-filter="month:2026-09">September 2026 (2)</button>
+        <button type="button" class="filter-btn" data-filter="month:2026-08">Agustus 2026 (1)</button>
+        <span class="text-muted small ms-auto d-none d-lg-inline" style="font-size: 0.76rem;">Rujukan data: Sipongi KLHK · BMKG FDRS · BNPB · Pantau Gambut</span>
       </div>
     </div>
 
@@ -441,6 +449,8 @@ require __DIR__ . '/../app/header.php';
             matchesCategory = category === currentFilter.replace('category:', '');
           } else if (currentFilter.startsWith('island:')) {
             matchesCategory = island === currentFilter.replace('island:', '');
+          } else if (currentFilter.startsWith('month:')) {
+            matchesCategory = card.getAttribute('data-month') === currentFilter.replace('month:', '');
           }
 
           const matchesQuery = !currentQuery || text.includes(currentQuery.toLowerCase());
