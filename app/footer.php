@@ -1,6 +1,6 @@
 </main>
 <footer class="site-footer">
-  <div class="container d-flex flex-wrap gap-4 justify-content-between align-items-center">
+  <div class="container d-flex flex-column flex-sm-row flex-sm-wrap gap-3 justify-content-between align-items-start align-items-sm-center">
     <a class="brand" href="index.php"><span><?= SITE ?></span></a>
     <span>Portal edukasi karhutla independen · 2026</span>
     <a href="tentang.php#metodologi">Sumber dan metodologi ↗</a>
