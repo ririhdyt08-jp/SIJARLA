@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 declare(strict_types=1);
 
 require __DIR__ . '/../app/bootstrap.php';
@@ -24,7 +24,6 @@ $report = $selected ? ($details[$selected['id']] ?? $selected) : null;
 $title = $report['title'] ?? ($id === null ? 'Arsip Laporan Karhutla' : 'Laporan Tidak Ditemukan');
 $active = 'artikel';
 
-// Calculate summary stats for list view
 $totalReports = count($stories);
 $totalRegional = count($regionalArticles);
 $totalField = count($incidents);
@@ -38,10 +37,9 @@ require __DIR__ . '/../app/header.php';
     $isRegional = isset($report['sections']);
     $itemTitle = $report['title'] ?? ($selected['title'] ?? 'Karhutla di ' . ($selected['place'] ?? $selected['region']));
     $itemRegion = $selected['province'] ?? $selected['region'];
-    $categoryTag = $isRegional ? 'ASAP LINTAS BATAS · REGIONAL ASEAN' : 'KARHUTLA LAPANGAN · BNPB INDONESIA';
+    $categoryTag = $isRegional ? 'ASAP LINTAS BATAS &middot; REGIONAL ASEAN' : 'KARHUTLA LAPANGAN &middot; TERVERIFIKASI';
     $monthParam = substr($selected['date'], 0, 7);
   ?>
-  <!-- Top Reading Progress Indicator -->
   <div class="reading-progress-track" aria-hidden="true">
     <div class="reading-progress-bar" id="reading-bar"></div>
   </div>
@@ -60,13 +58,11 @@ require __DIR__ . '/../app/header.php';
       <h1><?= e($itemTitle) ?></h1>
       
       <div class="article-byline">
-        <span><span aria-hidden="true">📅</span> <time datetime="<?= e($selected['date']) ?>"><?= e(tanggal($selected['date'])) ?></time></span>
-        <span>·</span>
-        <span><span aria-hidden="true">📍</span> <?= e($itemRegion) ?></span>
-        <span>·</span>
-        <span><span aria-hidden="true">⏱️</span> ± 2 Menit Baca</span>
-        <span>·</span>
-        <span><span aria-hidden="true">🏢</span> Sumber: <?= $isRegional ? 'ASMC & NEA' : 'BNPB & BPBD' ?></span>
+        <span><span aria-hidden="true">&#128197;</span> <time datetime="<?= e($selected['date']) ?>"><?= e(tanggal($selected['date'])) ?></time></span>
+        <span>&middot;</span>
+        <span><span aria-hidden="true">&#128205;</span> <?= e($itemRegion) ?></span>
+        <span>&middot;</span>
+        <span><span aria-hidden="true">&#9201;</span> &plusmn; 2 Menit Baca</span>
       </div>
     </div>
   </section>
@@ -76,8 +72,8 @@ require __DIR__ . '/../app/header.php';
       <!-- Main Content Column -->
       <div class="col-lg-8">
         <div class="mb-4">
-          <a class="text-link d-inline-flex align-items-center gap-1" href="artikel.php">
-            <span aria-hidden="true">←</span> Kembali ke Semua Artikel
+          <a class="action light-outline btn-sm d-inline-flex align-items-center gap-1" href="artikel.php">
+            <span aria-hidden="true">&#8592;</span> Kembali ke Semua Artikel
           </a>
         </div>
 
@@ -95,20 +91,6 @@ require __DIR__ . '/../app/header.php';
                 <p class="section-card-text"><?= e($paragraph) ?></p>
               </section>
             <?php endforeach; ?>
-
-            <section class="story-section-card mb-4">
-              <h2 class="section-card-title">Sumber Data & Pengamatan Regional</h2>
-              <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                <?php foreach ($report['sources'] as $source): ?>
-                  <li>
-                    <a class="text-link d-inline-flex align-items-center gap-1" href="<?= e($source['url']) ?>" target="_blank" rel="noopener noreferrer">
-                      <span><?= e($source['label']) ?></span>
-                      <span aria-hidden="true">↗</span>
-                    </a>
-                  </li>
-                <?php endforeach; ?>
-              </ul>
-            </section>
           </div>
 
         <?php else: ?>
@@ -117,42 +99,39 @@ require __DIR__ . '/../app/header.php';
             <h2 class="h3 mb-3">Laporan Penanganan Kejadian</h2>
             
             <div class="incident-timeline">
-              <!-- Step 1: Kronologi -->
               <div class="timeline-item active">
                 <div class="timeline-node" aria-hidden="true"></div>
                 <div class="timeline-content">
                   <div class="timeline-title">
-                    <span>1. Kronologi & Pemicu</span>
+                    <span>1. Kronologi &amp; Pemicu</span>
                     <span class="timeline-badge">AWAL KEJADIAN</span>
                   </div>
                   <p class="mb-0"><?= e($report['chronology']) ?></p>
                 </div>
               </div>
 
-              <!-- Step 2: Dampak -->
               <div class="timeline-item">
                 <div class="timeline-node" aria-hidden="true"></div>
                 <div class="timeline-content">
                   <div class="timeline-title">
-                    <span>2. Dampak Area & Kerusakan</span>
+                    <span>2. Dampak Area &amp; Kerusakan</span>
                     <span class="timeline-badge">DAMPAK FISIK</span>
                   </div>
                   <p class="mb-2"><?= e($report['impact']) ?></p>
                   <?php if (!empty($selected['area'])): ?>
                     <div class="stat-highlight-box">
                       <span class="stat-highlight-val"><?= e(luas($selected['area'])) ?></span>
-                      <span class="stat-highlight-lbl">Estimasi Luas Lahan Terbakar (±<?= number_format($selected['area'] * 10000, 0, ',', '.') ?> m²)</span>
+                      <span class="stat-highlight-lbl">Estimasi Luas Lahan Terbakar (&plusmn;<?= number_format($selected['area'] * 10000, 0, ',', '.') ?> m&sup2;)</span>
                     </div>
                   <?php endif; ?>
                 </div>
               </div>
 
-              <!-- Step 3: Penanganan -->
               <div class="timeline-item">
                 <div class="timeline-node" aria-hidden="true"></div>
                 <div class="timeline-content">
                   <div class="timeline-title">
-                    <span>3. Penanganan Tim & Status Akhir</span>
+                    <span>3. Penanganan Tim &amp; Status Akhir</span>
                     <span class="timeline-badge">RESPONS LAPANGAN</span>
                   </div>
                   <p class="mb-0"><?= e($report['response']) ?></p>
@@ -164,25 +143,20 @@ require __DIR__ . '/../app/header.php';
 
         <!-- Action Toolbar -->
         <div class="article-action-toolbar mt-5 p-4">
-          <h3 class="h4 mb-3">Tindakan Lanjutan & Verifikasi</h3>
+          <h3 class="h4 mb-3">Tindakan Lanjutan</h3>
           <div class="actions">
             <a class="action primary" href="peta.php?bulan=<?= e($monthParam) ?>#peta-bulanan">
-              Lihat Titik Panas di Peta GIS <span class="arrow-icon" aria-hidden="true">↗</span>
+              Lihat Titik Panas di Peta <span class="arrow-icon" aria-hidden="true">&#8599;</span>
             </a>
-            <?php if (!empty($selected['source'])): ?>
-              <a class="action light-outline" href="<?= e($selected['source']) ?>" target="_blank" rel="noopener noreferrer">
-                Sumber Resmi BNPB <span class="arrow-icon" aria-hidden="true">↗</span>
-              </a>
-            <?php endif; ?>
             <button class="action light-outline" type="button" id="copy-link-btn" onclick="copyCurrentUrl()">
-              Salin Tautan Artikel <span id="copy-icon" aria-hidden="true">📋</span>
+              Salin Tautan <span id="copy-icon" aria-hidden="true">&#128203;</span>
             </button>
           </div>
           <div id="copy-toast" class="copy-feedback-toast" role="status" aria-live="polite"></div>
         </div>
       </div>
 
-      <!-- Sidebar Column (Incident Factsheet ala Sipongi) -->
+      <!-- Sidebar Column -->
       <div class="col-lg-4">
         <aside class="incident-factsheet" aria-label="Lembar Fakta Kejadian">
           <div class="factsheet-title">
@@ -213,16 +187,12 @@ require __DIR__ . '/../app/header.php';
               <?php if (!empty($selected['coordinates'])): ?>
                 <tr>
                   <th scope="row">Koordinat GIS</th>
-                  <td><?= e($selected['coordinates'][0]) ?>°, <?= e($selected['coordinates'][1]) ?>°</td>
+                  <td><?= e($selected['coordinates'][0]) ?>&deg;, <?= e($selected['coordinates'][1]) ?>&deg;</td>
                 </tr>
               <?php endif; ?>
               <tr>
                 <th scope="row">Satelit Pantau</th>
                 <td>VIIRS NOAA-20 (NASA)</td>
-              </tr>
-              <tr>
-                <th scope="row">Lembaga Pelapor</th>
-                <td><?= $isRegional ? 'ASMC / NEA' : 'BNPB Indonesia' ?></td>
               </tr>
               <tr>
                 <th scope="row">Status Operasi</th>
@@ -234,18 +204,21 @@ require __DIR__ . '/../app/header.php';
           <?php if (!empty($selected['coordinates'])): ?>
             <div class="factsheet-cta mt-3">
               <a class="action outline w-100" href="peta.php?bulan=<?= e($monthParam) ?>#peta-bulanan">
-                Buka di Peta Satelit <span class="arrow-icon" aria-hidden="true">→</span>
+                Buka di Peta Satelit <span class="arrow-icon" aria-hidden="true">&#8594;</span>
               </a>
             </div>
           <?php endif; ?>
 
           <div class="factsheet-emergency-box">
             <strong>Posko Siaga Karhutla</strong>
-            <p>Melihat tanda kebakaran hutan atau asap pekat di sekitar Anda? Laporkan ke Posko Kementerian Kehutanan atau panggilan darurat:</p>
+            <p>Melihat tanda kebakaran hutan atau asap pekat di sekitar Anda? Laporkan segera:</p>
             <div class="mt-2 pt-2 border-top border-secondary">
               <span class="d-block fw-bold text-white">WhatsApp: 0813-1003-5000</span>
               <span class="d-block fw-bold text-white">Call Center Darurat: 112 / 110</span>
             </div>
+            <a class="action outline w-100 mt-3" href="kontak.php">
+              Lihat Semua Kanal Darurat <span class="arrow-icon" aria-hidden="true">&#8594;</span>
+            </a>
           </div>
         </aside>
       </div>
@@ -258,7 +231,7 @@ require __DIR__ . '/../app/header.php';
           <p class="eyebrow">DOKUMENTASI TERKAIT</p>
           <h2>Laporan Karhutla Lainnya</h2>
         </div>
-        <a class="text-link" href="artikel.php">Lihat Semua (<?= count($stories) ?>) →</a>
+        <a class="action light-outline btn-sm" href="artikel.php">Lihat Semua (<?= count($stories) ?>) &#8594;</a>
       </div>
 
       <div class="row g-3">
@@ -280,7 +253,7 @@ require __DIR__ . '/../app/header.php';
               </h3>
               <p class="story-summary small text-muted mb-3"><?= e(mb_strimwidth($relItem['summary'], 0, 110, '...')) ?></p>
               <a class="action light-outline btn-sm w-100 mt-auto" href="artikel.php?id=<?= e($relItem['id']) ?>">
-                BACA DETAIL →
+                BACA DETAIL &#8594;
               </a>
             </article>
           </div>
@@ -290,33 +263,21 @@ require __DIR__ . '/../app/header.php';
   </main>
 
   <script>
-    // Reading Progress Bar
     window.addEventListener('scroll', () => {
       const bar = document.getElementById('reading-bar');
       if (!bar) return;
       const winScroll = document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
-      bar.style.width = scrolled + '%';
+      bar.style.width = (height > 0 ? (winScroll / height) * 100 : 0) + '%';
     });
 
-    // Copy Article URL
     function copyCurrentUrl() {
       navigator.clipboard.writeText(window.location.href).then(() => {
         const toast = document.getElementById('copy-toast');
         const icon = document.getElementById('copy-icon');
-        if (toast) {
-          toast.textContent = '✓ Tautan artikel berhasil disalin ke clipboard!';
-          toast.classList.add('show');
-          setTimeout(() => toast.classList.remove('show'), 3500);
-        }
-        if (icon) {
-          icon.textContent = '✓';
-          setTimeout(() => icon.textContent = '📋', 3500);
-        }
-      }).catch(() => {
-        alert('Tautan: ' + window.location.href);
-      });
+        if (toast) { toast.textContent = '\u2714 Tautan berhasil disalin!'; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 3500); }
+        if (icon) { icon.textContent = '\u2714'; setTimeout(() => icon.textContent = '\uD83D\uDCCB', 3500); }
+      }).catch(() => { alert('Tautan: ' + window.location.href); });
     }
   </script>
 
@@ -326,36 +287,36 @@ require __DIR__ . '/../app/header.php';
     <div class="container">
       <p class="eyebrow">STATUS 404</p>
       <h1>Laporan Tidak Ditemukan</h1>
-      <p>Laporan atau artikel karhutla dengan ID <code><?= e($id) ?></code> tidak tercatat dalam arsip data kami.</p>
+      <p>Laporan dengan ID <code><?= e($id) ?></code> tidak tercatat dalam arsip kami.</p>
     </div>
   </section>
   <div class="container section text-center">
-    <p class="mb-4">Silakan kembali ke direktori utama untuk melihat seluruh laporan karhutla Indonesia dan pantauan regional.</p>
-    <a class="action primary" href="artikel.php">Kembali ke Semua Artikel →</a>
+    <p class="mb-4">Silakan kembali ke direktori utama untuk melihat seluruh laporan karhutla Indonesia.</p>
+    <a class="action primary" href="artikel.php">Kembali ke Semua Artikel &#8594;</a>
   </div>
 
 <?php else: ?>
-  <!-- List View: Main Articles Portal -->
+  <!-- List View -->
   <section class="page-intro">
     <div class="container">
-      <p class="eyebrow"><span class="signal"></span> ARSIP INVESTIGASI & JURNAL LINGKUNGAN / 2026</p>
+      <p class="eyebrow"><span class="signal"></span> ARSIP INVESTIGASI &amp; JURNAL LINGKUNGAN / 2026</p>
       <h1>ARSIP LAPORAN KARHUTLA.</h1>
       <p>Dokumentasi komprehensif kejadian kebakaran hutan dan lahan di berbagai wilayah Indonesia serta jejak persebaran kabut asap lintas batas di Asia Tenggara.</p>
     </div>
   </section>
 
   <section class="container section pt-4" aria-label="Daftar artikel karhutla">
-    <!-- Environmental Intelligence Stats Bar -->
+    <!-- Stats Bar -->
     <div class="intel-stats-bar" role="region" aria-label="Statistik Data Karhutla">
       <div class="intel-stat-card">
         <span class="intel-stat-label">Total Laporan</span>
         <div class="intel-stat-value"><?= $totalReports ?> Data</div>
-        <p class="intel-stat-desc"><?= $totalField ?> Kejadian Lapangan & <?= $totalRegional ?> Lintas Batas</p>
+        <p class="intel-stat-desc"><?= $totalField ?> Kejadian Lapangan &amp; <?= $totalRegional ?> Lintas Batas</p>
       </div>
       <div class="intel-stat-card">
         <span class="intel-stat-label">Cakupan Wilayah</span>
         <div class="intel-stat-value">7 Provinsi + 3 Negara</div>
-        <p class="intel-stat-desc">Indonesia, Singapura, Malaysia & Filipina</p>
+        <p class="intel-stat-desc">Indonesia, Singapura, Malaysia &amp; Filipina</p>
       </div>
       <div class="intel-stat-card">
         <span class="intel-stat-label">Luas Terbakar Terdokumentasi</span>
@@ -363,23 +324,17 @@ require __DIR__ . '/../app/header.php';
         <p class="intel-stat-desc">Taksiran luasan insiden lapangan terdata</p>
       </div>
       <div class="intel-stat-card">
-        <span class="intel-stat-label">Rujukan Data Resmi</span>
-        <div class="intel-stat-value">6 Sumber Data</div>
-        <p class="intel-stat-desc">Sipongi KLHK, BMKG Cuaca, Pantau Gambut & NOAA-20</p>
+        <span class="intel-stat-label">Periode Data</span>
+        <div class="intel-stat-value">Agt &ndash; Nov 2026</div>
+        <p class="intel-stat-desc">3 periode bulan, diperbarui berkala</p>
       </div>
     </div>
 
-    <!-- Interactive Filter & Search Toolbar -->
+    <!-- Filter & Search Toolbar -->
     <div class="article-toolbar" role="search" aria-label="Pencarian dan Filter Artikel">
       <div class="row g-3 align-items-center mb-3">
         <div class="col-lg-7">
-          <div class="position-relative">
-            <input type="search" 
-                   id="article-search" 
-                   class="article-search-input" 
-                   placeholder="🔍  Cari nama desa, kabupaten, provinsi, atau kata kunci..." 
-                   aria-label="Cari artikel">
-          </div>
+          <input type="search" id="article-search" class="article-search-input" placeholder="&#128269; Cari nama desa, kabupaten, provinsi, atau kata kunci..." aria-label="Cari artikel">
         </div>
         <div class="col-lg-5 text-lg-end">
           <div class="filter-count" id="filter-count-display">
@@ -389,11 +344,11 @@ require __DIR__ . '/../app/header.php';
       </div>
 
       <div class="filter-pill-group mb-2" role="group" aria-label="Filter kategori artikel">
-        <span class="text-muted small fw-bold text-uppercase me-1" style="font-size: 0.75rem; letter-spacing: 0.05em;">Kategori:</span>
+        <span class="text-muted small fw-bold text-uppercase me-1" style="font-size:0.75rem;letter-spacing:0.05em">Kategori:</span>
         <button type="button" class="filter-btn active" data-filter="all">Semua (<?= $totalReports ?>)</button>
-        <button type="button" class="filter-btn" data-filter="category:field">🔥 Lapangan (<?= $totalField ?>)</button>
-        <button type="button" class="filter-btn" data-filter="category:regional">🌏 Lintas Batas (<?= $totalRegional ?>)</button>
-        <span class="text-muted small fw-bold text-uppercase ms-lg-2 me-1" style="font-size: 0.75rem; letter-spacing: 0.05em;">Pulau:</span>
+        <button type="button" class="filter-btn" data-filter="category:field">&#128293; Lapangan (<?= $totalField ?>)</button>
+        <button type="button" class="filter-btn" data-filter="category:regional">&#127758; Lintas Batas (<?= $totalRegional ?>)</button>
+        <span class="text-muted small fw-bold text-uppercase ms-lg-2 me-1" style="font-size:0.75rem;letter-spacing:0.05em">Pulau:</span>
         <button type="button" class="filter-btn" data-filter="island:jawa">Jawa</button>
         <button type="button" class="filter-btn" data-filter="island:kalimantan">Kalimantan</button>
         <button type="button" class="filter-btn" data-filter="island:sulawesi">Sulawesi</button>
@@ -401,29 +356,26 @@ require __DIR__ . '/../app/header.php';
       </div>
 
       <div class="filter-pill-group pt-2 border-top" role="group" aria-label="Filter periode bulan kejadian">
-        <span class="text-muted small fw-bold text-uppercase me-1" style="font-size: 0.75rem; letter-spacing: 0.05em;">📅 Periode Bulan:</span>
+        <span class="text-muted small fw-bold text-uppercase me-1" style="font-size:0.75rem;letter-spacing:0.05em">Periode Bulan:</span>
         <button type="button" class="filter-btn" data-filter="month:2026-11">November 2026 (13)</button>
         <button type="button" class="filter-btn" data-filter="month:2026-09">September 2026 (2)</button>
         <button type="button" class="filter-btn" data-filter="month:2026-08">Agustus 2026 (1)</button>
-        <span class="text-muted small ms-auto d-none d-lg-inline" style="font-size: 0.76rem;">Rujukan data: Sipongi KLHK · BMKG FDRS · BNPB · Pantau Gambut</span>
       </div>
     </div>
 
-    <!-- Empty State Message -->
+    <!-- Empty State -->
     <div id="no-results-msg" class="text-center py-5 d-none">
       <h3 class="h4 text-muted">Tidak ada laporan yang sesuai dengan pencarian.</h3>
       <p class="text-muted">Coba gunakan kata kunci lain atau klik tombol "Semua" pada filter di atas.</p>
       <button type="button" class="action primary btn-sm mt-2" onclick="resetFilters()">Reset Filter</button>
     </div>
 
-    <!-- Cards Grid -->
     <?php
       usort($stories, static fn (array $a, array $b): int => strcmp($b['date'], $a['date']));
       require __DIR__ . '/../app/cards.php';
     ?>
   </section>
 
-  <!-- Client-side Interactive Search & Filter Script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const searchInput = document.getElementById('article-search');
@@ -431,9 +383,7 @@ require __DIR__ . '/../app/header.php';
       const cards = document.querySelectorAll('.article-card-col');
       const visibleCountElem = document.getElementById('visible-count');
       const noResultsMsg = document.getElementById('no-results-msg');
-
-      let currentFilter = 'all';
-      let currentQuery = '';
+      let currentFilter = 'all', currentQuery = '';
 
       function applyFilters() {
         let count = 0;
@@ -441,61 +391,28 @@ require __DIR__ . '/../app/header.php';
           const category = card.getAttribute('data-category');
           const island = card.getAttribute('data-island');
           const text = card.getAttribute('data-search') || '';
-
           let matchesCategory = true;
-          if (currentFilter === 'all') {
-            matchesCategory = true;
-          } else if (currentFilter.startsWith('category:')) {
-            matchesCategory = category === currentFilter.replace('category:', '');
-          } else if (currentFilter.startsWith('island:')) {
-            matchesCategory = island === currentFilter.replace('island:', '');
-          } else if (currentFilter.startsWith('month:')) {
-            matchesCategory = card.getAttribute('data-month') === currentFilter.replace('month:', '');
-          }
-
+          if (currentFilter.startsWith('category:')) matchesCategory = category === currentFilter.replace('category:', '');
+          else if (currentFilter.startsWith('island:')) matchesCategory = island === currentFilter.replace('island:', '');
+          else if (currentFilter.startsWith('month:')) matchesCategory = card.getAttribute('data-month') === currentFilter.replace('month:', '');
           const matchesQuery = !currentQuery || text.includes(currentQuery.toLowerCase());
-
-          if (matchesCategory && matchesQuery) {
-            card.classList.remove('d-none');
-            count++;
-          } else {
-            card.classList.add('d-none');
-          }
+          if (matchesCategory && matchesQuery) { card.classList.remove('d-none'); count++; }
+          else card.classList.add('d-none');
         });
-
-        if (visibleCountElem) {
-          visibleCountElem.textContent = count;
-        }
-
-        if (noResultsMsg) {
-          if (count === 0) {
-            noResultsMsg.classList.remove('d-none');
-          } else {
-            noResultsMsg.classList.add('d-none');
-          }
-        }
+        if (visibleCountElem) visibleCountElem.textContent = count;
+        if (noResultsMsg) noResultsMsg.classList.toggle('d-none', count !== 0);
       }
 
-      if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-          currentQuery = e.target.value.trim();
-          applyFilters();
-        });
-      }
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          filterBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          currentFilter = btn.getAttribute('data-filter') || 'all';
-          applyFilters();
-        });
-      });
-
+      if (searchInput) searchInput.addEventListener('input', e => { currentQuery = e.target.value.trim(); applyFilters(); });
+      filterBtns.forEach(btn => btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.getAttribute('data-filter') || 'all';
+        applyFilters();
+      }));
       window.resetFilters = function() {
         if (searchInput) searchInput.value = '';
-        currentQuery = '';
-        currentFilter = 'all';
+        currentQuery = ''; currentFilter = 'all';
         filterBtns.forEach(b => b.classList.remove('active'));
         const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
         if (allBtn) allBtn.classList.add('active');

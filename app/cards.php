@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // app/cards.php
 ?>
 <div class="row g-3" id="article-grid">
@@ -10,7 +10,6 @@
     $categoryTag = $isRegional ? 'LINTAS BATAS' : 'INSIDEN LAPANGAN';
     $categoryClass = $isRegional ? 'transboundary' : 'field';
     
-    // Island detection for filtering
     $island = 'lainnya';
     if ($isRegional) {
         $island = 'regional';
@@ -46,20 +45,15 @@
 
       <div class="story-chips mt-auto">
         <?php if (!empty($item['area'])): ?>
-          <span class="data-chip"><span aria-hidden="true">📐</span> <?= e(luas($item['area'])) ?></span>
+          <span class="data-chip"><span aria-hidden="true">&#128205;</span> <?= e(luas($item['area'])) ?></span>
         <?php endif; ?>
         <?php if (!empty($item['coordinates'])): ?>
-          <span class="data-chip"><span aria-hidden="true">📍</span> <?= e($item['coordinates'][0]) ?>, <?= e($item['coordinates'][1]) ?></span>
-        <?php endif; ?>
-        <?php if ($isRegional): ?>
-          <span class="data-chip"><span aria-hidden="true">🛰️</span> Ref: ASMC & NEA</span>
-        <?php else: ?>
-          <span class="data-chip"><span aria-hidden="true">🏢</span> Ref: Sipongi & BNPB</span>
+          <span class="data-chip"><span aria-hidden="true">&#128204;</span> <?= e($item['coordinates'][0]) ?>, <?= e($item['coordinates'][1]) ?></span>
         <?php endif; ?>
       </div>
 
-      <a class="action primary w-100" href="artikel.php?id=<?= e($item['id']) ?>">
-        BACA LAPORAN <span class="arrow-icon" aria-hidden="true">→</span>
+      <a class="action primary w-100 mt-3" href="artikel.php?id=<?= e($item['id']) ?>">
+        BACA LAPORAN <span class="arrow-icon" aria-hidden="true">&#8594;</span>
       </a>
     </article>
   </div>

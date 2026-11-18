@@ -657,3 +657,185 @@ p { line-height: 1.65; }
   .hero::before { background: linear-gradient(90deg, #111111ed, #11111196); }
   .section-head { align-items: start; }
 }
+
+/* =============================================
+   KONTAK PAGE COMPONENTS
+   ============================================= */
+
+/* Emergency Banner */
+.kontak-emergency-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  background: linear-gradient(135deg, var(--rust) 0%, #7a2808 100%);
+  border-left: 5px solid var(--orange);
+  padding: 1.5rem 2rem;
+  border-radius: 0;
+}
+.emergency-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.emergency-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+.emergency-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+.emergency-desc {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+}
+.emergency-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Kontak Card */
+.kontak-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--orange);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.kontak-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+.kontak-card-team {
+  border-top-color: var(--rust);
+}
+.kontak-card-icon {
+  font-size: 2rem;
+  padding: 1.25rem 1.5rem 0;
+}
+.kontak-card-body {
+  padding: 1rem 1.5rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.kontak-card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+.kontak-card-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  flex: 0;
+}
+.kontak-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+.kontak-info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+.kontak-info-label {
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  min-width: 70px;
+  padding-top: 0.1rem;
+}
+.kontak-info-value {
+  color: var(--ink);
+  word-break: break-all;
+}
+.kontak-tips-box {
+  background: rgba(255,116,54,0.08);
+  border-left: 3px solid var(--orange);
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+.kontak-team-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+.kontak-team-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Kontak Nav Cards */
+.kontak-nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.25rem 1.25rem 1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--orange);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 0.18s, border-color 0.18s, transform 0.18s;
+  position: relative;
+}
+.kontak-nav-card:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-left-color: var(--orange);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.kontak-nav-card:hover .kontak-nav-arrow {
+  color: var(--orange);
+}
+.kontak-nav-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+.kontak-nav-card strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+}
+.kontak-nav-card span:not(.kontak-nav-icon):not(.kontak-nav-arrow) {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.kontak-nav-card:hover span:not(.kontak-nav-icon):not(.kontak-nav-arrow) {
+  color: rgba(255,255,255,0.65);
+}
+.kontak-nav-arrow {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.25rem;
+  font-size: 1.1rem;
+  color: var(--orange);
+}
+
