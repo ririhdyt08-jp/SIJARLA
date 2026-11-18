@@ -8,8 +8,8 @@ require __DIR__ . '/../app/header.php';
   <video id="hero-video" class="hero-video" muted loop playsinline preload="none"
     data-src="assets/video/hero-karhutla.mp4" aria-hidden="true"></video>
   <div class="container hero-content">
-    <h1>SAAT HUTAN<br>MENJADI <em>BARA.</em></h1>
-    <p class="hero-copy">Asap karhutla Indonesia bisa terbawa angin hingga ke negara tetangga. Telusuri titik panasnya dan baca dampaknya bagi kualitas udara di Asia Tenggara.</p>
+    <h1>KETIKA API MENYALA, DUNIA MERASAKAN <em>DAMPAKNYA.</em></h1>
+    <p class="hero-copy">Kebakaran hutan dan lahan membawa ancaman yang melampaui batas wilayah. Telusuri persebaran titik panas di Indonesia, kenali dampak kabut asap lintas negara, dan pahami ancamannya bagi lingkungan serta kehidupan.</p>
     <div class="actions"><a class="action primary" href="peta.php">Jelajahi peta <span aria-hidden="true">↗</span></a><a class="action outline" href="artikel.php">Baca laporan <span aria-hidden="true">→</span></a></div>
   </div>
 </section>
@@ -23,14 +23,6 @@ require __DIR__ . '/../app/header.php';
 <section class="container section report-carousel" aria-labelledby="report-heading">
   <div class="section-head">
     <div><p class="eyebrow">DARI LAPANGAN</p><h2 id="report-heading">Laporan karhutla</h2></div>
-    <div class="report-carousel-actions">
-      <a class="text-link" href="artikel.php">Semua laporan ↗</a>
-      <div class="report-carousel-controls" hidden>
-        <button class="action outline" type="button" data-slide="-1" aria-label="Laporan sebelumnya" aria-controls="article-grid">&#8592;</button>
-        <button class="action outline" type="button" data-rotate aria-controls="article-grid">Jeda</button>
-        <button class="action outline" type="button" data-slide="1" aria-label="Laporan berikutnya" aria-controls="article-grid">&#8594;</button>
-      </div>
-    </div>
   </div>
   <?php $stories = array_slice($incidents, 0, 9); require __DIR__ . '/../app/cards.php'; ?>
 </section>

@@ -14,7 +14,7 @@
 <?php if ($active === 'peta'): ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
 <?php endif; ?>
-<link rel="stylesheet" href="assets/css/site.css?v=report-carousel-map-recap">
+<link rel="stylesheet" href="assets/css/site.css?v=home-headline-auto-reports">
 </head>
 <body>
 <a class="skip-link" href="#konten">Lewati ke konten</a>
