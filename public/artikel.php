@@ -1,6 +1,4 @@
-﻿<?php
-declare(strict_types=1);
-
+<?php
 require __DIR__ . '/../app/bootstrap.php';
 
 $id = $_GET['id'] ?? null;

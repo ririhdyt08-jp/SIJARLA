@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // app/cards.php
 ?>
 <div class="row g-3" id="article-grid">
