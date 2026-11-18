@@ -1,7 +1,7 @@
 (() => {
   const status = document.getElementById('hotspot-status');
   if (!window.L) {
-    status.textContent = 'Peta gagal dimuat. Gunakan tautan NASA Worldview.';
+    status.textContent = 'Peta gagal dimuat. Coba muat ulang halaman.';
     document.getElementById('hotspot-alert').textContent = 'Deteksi satelit belum dapat ditampilkan.';
     return;
   }
@@ -19,6 +19,7 @@
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   });
   const map = L.map(mapElement, { scrollWheelZoom: false, maxZoom: 18, zoomSnap: 0.25 });
+  map.attributionControl.setPrefix(false);
   satellite.addTo(map);
   L.control.layers({ Satelit: satellite, 'Peta jalan': streets }).addTo(map);
   const fit = bounds => map.fitBounds(bounds, { padding: [15, 15] });
@@ -51,7 +52,7 @@
   import('./hotspots.js')
     .then(({ mountHotspots }) => mountHotspots(map, months, status))
     .catch(() => {
-      status.textContent = 'Lapisan interaktif gagal dimuat. Gunakan tautan NASA Worldview.';
+      status.textContent = 'Lapisan interaktif gagal dimuat. Coba muat ulang halaman.';
       document.getElementById('hotspot-alert').textContent = 'Deteksi satelit belum dapat ditampilkan.';
     });
 })();

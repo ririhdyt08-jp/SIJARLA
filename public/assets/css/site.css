@@ -667,7 +667,6 @@ p { line-height: 1.65; }
 }
 .map-legend strong { font-size: .95rem; }
 .map-legend small { color: #d4dbe2; margin-bottom: .2rem; }
-.map-source { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; margin: .8rem 0 .6rem; font-size: .875rem; }
 .hotspot-key { display: inline-block; vertical-align: .06em; width: .66em; height: .66em; margin-right: .3em; border-radius: 50%; }
 .hotspot-key.low { background: #4bcaf5; }
 .hotspot-key.nominal { background: #f88426; }

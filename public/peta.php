@@ -55,10 +55,6 @@ require __DIR__ . '/../app/header.php';
       <span><i class="hotspot-key high" aria-hidden="true"></i> Cincin merah · Grup memuat deteksi tinggi</span>
     </aside>
   </div>
-  <div class="map-source d-flex flex-wrap justify-content-between align-items-center gap-2 mt-2">
-    <a class="text-link" href="https://worldview.earthdata.nasa.gov/?l=VIIRS_NOAA20_Thermal_Anomalies_375m_All&v=94,-12,142,8" target="_blank" rel="noopener">Buka Citra di NASA Worldview ↗</a>
-    <span class="text-muted small">Satelit: VIIRS NOAA-20 (Sensor 375m) · Sumber Resmi Sipongi KLHK & NASA FIRMS</span>
-  </div>
 
   <!-- Monthly Intelligence & BMKG FDRS Risk Benchmark Card -->
   <div class="story monthly-climate-card mt-3 mb-3 w-100" id="monthly-climate-card">
@@ -99,7 +95,6 @@ require __DIR__ . '/../app/header.php';
   </div>
 
   <p class="map-note">Klik lingkaran angka untuk memperbesar peta. Klik titik untuk melihat waktu deteksi (UTC), koordinat, dan wilayah terdekat. Jumlah menunjukkan deteksi satelit, yang bisa berulang di lokasi yang sama.</p>
-  <p class="map-note">Peta ini menunjukkan lokasi deteksi panas. Untuk mengikuti arah kepulan di luar lokasi kebakaran, baca <a class="text-link" href="artikel.php?id=asap-filipina-2026">jejak asap Kalimantan ke Filipina ↗</a>.</p>
   <noscript><p>Aktifkan JavaScript untuk menggunakan peta interaktif.</p></noscript>
 </section>
 
