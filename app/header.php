@@ -14,7 +14,7 @@
 <?php if ($active === 'peta'): ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
 <?php endif; ?>
-<link rel="stylesheet" href="assets/css/site.css?v=home-headline-auto-reports">
+<link rel="stylesheet" href="assets/css/site.css?v=auto-ticker">
 </head>
 <body>
 <a class="skip-link" href="#konten">Lewati ke konten</a>
@@ -24,7 +24,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Buka menu"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav mx-lg-auto gap-1 py-2 py-lg-0">
-        <?php foreach (['index' => 'Beranda', 'tentang' => 'Tentang', 'artikel' => 'Artikel', 'peta' => 'Peta GIS', 'kontak' => 'Kontak'] as $page => $label): ?>
+        <?php foreach (['index' => 'Beranda', 'tentang' => 'Tentang', 'artikel' => 'Artikel', 'peta' => 'Peta', 'kontak' => 'Kontak'] as $page => $label): ?>
         <li class="nav-item"><a class="nav-link<?= $active === $page ? ' active' : '' ?>" href="<?= $page ?>.php" <?= $active === $page ? 'aria-current="page"' : '' ?>><?= $label ?></a></li>
         <?php endforeach; ?>
       </ul>

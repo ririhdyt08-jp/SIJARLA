@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/../app/bootstrap.php';
-$title = 'Peta GIS';
+$title = 'Peta';
 $active = 'peta';
 $mapIncident = null;
 $recap = [];
@@ -58,7 +58,6 @@ require __DIR__ . '/../app/header.php';
   </aside>
   <div class="container px-0 map-note">
     <p>Klik lingkaran bernomor untuk memperbesar peta, atau klik titik untuk melihat waktu deteksi (UTC), koordinat, dan wilayah terdekat. Satelit bisa mendeteksi lokasi yang sama lebih dari sekali.</p>
-    <p>Peta menampilkan lokasi deteksi panas. Untuk melihat arah sebaran asap, baca <a class="text-link" href="artikel.php?id=asap-filipina-2026">jejak asap Kalimantan ke Filipina</a>.</p>
   </div>
   <noscript><p>Aktifkan JavaScript untuk menggunakan peta interaktif.</p></noscript>
 </section>

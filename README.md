@@ -1,6 +1,6 @@
 # SIJARLA
 
-SIJARLA (Sistem Informasi Jaga Rimba dan Lahan) adalah portal edukasi karhutla Indonesia untuk tema **Isu Lingkungan Global**. Situs memuat beranda, tentang, artikel dengan detail per kejadian, kontak, dan peta GIS.
+SIJARLA (Sistem Informasi Jaga Rimba dan Lahan) adalah portal edukasi karhutla Indonesia untuk tema **Isu Lingkungan Global**. Situs memuat beranda, tentang, artikel dengan detail per kejadian, kontak, dan peta.
 
 ## Nama tim dan anggota
 

@@ -147,7 +147,7 @@ require __DIR__ . '/../app/header.php';
     <div class="col-sm-6 col-lg-3">
       <a class="kontak-nav-card" href="peta.php">
         <span class="kontak-nav-icon" aria-hidden="true"><?= icon('pin') ?></span>
-        <strong>Peta GIS</strong>
+        <strong>Peta</strong>
         <span>Sebaran titik panas</span>
         <span class="kontak-nav-arrow" aria-hidden="true">&#8594;</span>
       </a>

@@ -13,12 +13,16 @@ require __DIR__ . '/../app/header.php';
     <div class="actions"><a class="action primary" href="peta.php">Jelajahi peta <span aria-hidden="true">↗</span></a><a class="action outline" href="artikel.php">Baca laporan <span aria-hidden="true">→</span></a></div>
   </div>
 </section>
-<aside class="info-ticker" aria-label="Informasi SIJARLA">
-  <ul class="container ticker-items list-unstyled mb-0" role="list">
-    <li>Data titik panas VIIRS NOAA-20 tersedia hingga <?= SNAPSHOT ?></li>
-    <li>Pilih bulan di Peta GIS untuk melihat sebaran titik panas</li>
-    <li>Laporkan asap atau titik api melalui kanal resmi di halaman Kontak</li>
-  </ul>
+<aside class="info-ticker" aria-label="Informasi SIJARLA" tabindex="0">
+  <div class="ticker-track">
+    <?php for ($copy = 0; $copy < 2; $copy++): ?>
+      <ul class="ticker-items list-unstyled mb-0" role="list"<?= $copy ? ' aria-hidden="true"' : '' ?>>
+        <li>Data titik panas VIIRS NOAA-20 tersedia hingga <?= SNAPSHOT ?></li>
+        <li>Pilih bulan di Peta untuk melihat sebaran titik panas</li>
+        <li>Laporkan asap atau titik api melalui kanal resmi di halaman Kontak</li>
+      </ul>
+    <?php endfor; ?>
+  </div>
 </aside>
 <section class="container section report-carousel" aria-labelledby="report-heading">
   <div class="section-head">
