@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" data-bs-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,9 +14,9 @@
 <?php if ($active === 'peta'): ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
 <?php endif; ?>
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v=dark">
 </head>
-<body<?= $active === 'index' ? ' class="home-page"' : '' ?>>
+<body>
 <a class="skip-link" href="#konten">Lewati ke konten</a>
 <header class="site-header">
   <nav class="container navbar navbar-expand-lg navbar-dark" aria-label="Navigasi utama">

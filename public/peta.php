@@ -69,13 +69,13 @@ require __DIR__ . '/../app/header.php';
           Memasuki pertengahan November, curah hujan meningkat di bagian barat Indonesia. Berdasarkan data Sipongi KLHK dan BMKG, titik panas satelit VIIRS/NOAA-20 terkonsentrasi pada pembersihan sisa panen di Jawa Timur dan lereng pegunungan di Sulawesi.
         </p>
         <div class="small">
-          <strong class="text-dark">Fokus Sebaran Wilayah:</strong> 
+          <strong>Fokus Sebaran Wilayah:</strong>
           <span id="monthly-top-regions" class="text-muted">Jawa Timur, Sulawesi Selatan, Kalimantan Utara</span>
         </div>
       </div>
       
       <div class="col-md-5">
-        <div class="bg-light p-2 border rounded-1 h-100">
+        <div class="bg-body-tertiary p-2 border rounded-1 h-100">
           <span class="d-block text-muted fw-bold small text-uppercase mb-1" style="font-size: 0.72rem; letter-spacing: 0.04em;">Portal Rujukan Resmi Data Nyata:</span>
           <ul class="list-unstyled mb-0 small d-flex flex-column gap-1">
             <li><a class="text-link" href="https://sipongi.gakkum.kehutanan.go.id/" target="_blank" rel="noopener">Sipongi KLHK (Data Satelit & Luas) ↗</a></li>
